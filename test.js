@@ -2,8 +2,8 @@ var Web3 = require('web3');
 var Accounts = require('web3-eth-accounts');
 
 
-var account = "wallet address"
-var privateKeyJS = "private key"
+var account = "0x9F827F440B00F7B5917827b2E2c002275fE7B3c2"
+var privateKeyJS = "e31b9a051cbe8139b599814c12394851f58fc97af56b1118595e28ad7084265a"
 
 // Define the Web3 provider
 const web3 = new Web3('https://rpc.testnet.moonbeam.network');
@@ -53,7 +53,7 @@ async function nestedCall() {
 
     for (let i = 0; i < 10; i++){
     currentnonce = '0x'+(parseInt(nonce.result.substring(2),16)+i).toString(16)
-    //currentvalue =  '0x'+i.toString(16)
+    currentvalue =  '0x'+i.toString(16)
     
     let callTx = await accounts.signTransaction(
       {
